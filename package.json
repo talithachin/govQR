@@ -1,0 +1,42 @@
+{
+  "name": "govqr",
+  "version": "1.0.0",
+  "description": "allows people to create qr codes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talithachin/govQR.git"
+  },
+  "keywords": [
+    "QR"
+  ],
+  "files": [
+    "dist",
+    "History.md",
+    "LICENSE-MIT"
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-banner": "^0.5.0",
+    "grunt-contrib-concat": "~0.4",
+    "grunt-contrib-nodeunit": "~0.3",
+    "grunt-contrib-uglify": "~0.4",
+    "grunt-tasks": "^1.0.0",
+    "time-grunt": "~0.3"
+  },
+  "author": "talitha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talithachin/govQR/issues"
+  },
+  "homepage": "https://github.com/talithachin/govQR#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "ejs-lint": "^1.0.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.8.10"
+  }
+}

@@ -1,0 +1,129 @@
+
+ <%-include("partials/header.ejs")-%>
+<div class= "container">
+    <h1></h1>
+    <form>
+        <div class="form-group row">
+          <label for="name" class="col-sm-3 col-form-label">Name</label>
+          <div class="col-sm-8">
+            <input type="name" class="form-control" id="name"aria-describedby="name">
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="agency" class="col-sm-3 col-form-label">Agency</label>
+            <div class="col-sm-8">
+            <input type="agency" class="form-control" id="agency"aria-describedby="agency">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="DID" class="col-sm-3 col-form-label">DID</label>
+            <div class="col-sm-8">
+             <input type="DID" class="form-control" id="DID"aria-describedby="DID">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="HP" class="col-sm-3 col-form-label">HP</label>
+            <div class="col-sm-8">
+            <input type="HP" class="form-control" id="HP"aria-describedby="HP">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-sm-3 col-form-label">Email</label>
+            <div class="col-sm-8">
+            <input type="email" class="form-control" id="email"aria-describedby="email">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="address" class="col-sm-3 col-form-label">Address</label>
+            <div class="col-sm-8">
+            <input type="address" class="form-control" id="address"aria-describedby="address">
+            </div>
+        </div>
+       <div class="row"> <button type="button" class="btn btn-primary">Create Contact</button></div>
+      
+       <div id="qr2"></div>
+       <div id="qr_vcard"></div>
+
+       <%var testContact = contact.Name %>
+       <div id="qr1"><%qrCode.createVCard(testContact)%></div>
+       <% document.getElementById('vcard').innerHTML = qrCode.createVCard(testContact)%>
+
+    </form>
+</div>
+ 
+<pre id="vcard"></pre>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+
+ <body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  
+<!-- <script>
+    
+    var  testCard= {
+        version: '3.0',
+        lastName: 'Нижинский',
+        middleName: 'D',
+        firstName: 'Костя',
+        nameSuffix: 'JR',
+        namePrefix: 'MR',
+        nickname: 'Test User',
+        gender: 'M',
+        organization: 'ACME Corporation',
+        workPhone: '312-555-1212444',
+        homePhone: '312-555-1313333',
+        cellPhone: '312-555-1414111',
+        pagerPhone: '312-555-1515222',
+        homeFax: '312-555-1616',
+        workFax: '312-555-1717',
+        birthday: "20140112",
+        anniversary: "20140112",
+        title: 'Crash Test Dummy',
+        role: 'Crash Testing',
+        email: 'john.doe@testmail',
+        workEmail: 'john.doe@workmail',
+        url: 'http://johndoe',
+        workUrl: 'http://acemecompany/johndoe',
+        homeAddress: {
+            label: 'Home Address',
+            street: '123 Main Street',
+            city: 'Chicago',
+            stateProvince: 'IL',
+            postalCode: '12345',
+            countryRegion: 'United States of America'
+        },
+
+        workAddress: {
+            label: 'Work Address',
+            street: '123 Corporate Loop\nSuite 500',
+            city: 'Los Angeles',
+            stateProvince: 'CA',
+            postalCode: '54321',
+            countryRegion: 'California Republic'
+        },
+
+        source: 'http://sourceurl',
+        note: 'dddddd',
+        socialUrls: {
+            facebook: 'johndoe',
+            linkedIn: 'johndoe',
+            twitter: 'johndoe',
+            flickr: 'johndoe',
+            skype:"test_skype",
+            custom: 'johndoe'
+        }
+    };
+
+    
+    document.getElementById('qr2').innerHTML = qrCode.createQr("test QR 2");
+    
+    document.getElementById('vcard').innerHTML = qrCode.createVCard(testCard)
+
+
+</script>  -->
+<%- include ("partials/footer") %> 
